@@ -112,6 +112,10 @@ hr {
     box-shadow: 2px 5px 20px hsl(0, 0%, 48%);
 }
 
+.start h2{
+    font-size: 19px;
+}
+
 .start>div {
     padding: 12px;
     margin: auto;
@@ -140,8 +144,7 @@ hr {
 .general-information {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .general-information>div {
@@ -176,6 +179,10 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
 .avaliations>div {
@@ -245,7 +252,7 @@ iframe {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    width: 180px;
+    width: 200px;
 }
 
 .staff>article>h4 {
@@ -256,7 +263,7 @@ iframe {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 8px;
     height: 100%;
 }
 
@@ -265,10 +272,15 @@ iframe {
     color: white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 16px;
     text-align: center;
     padding: 16px;
     border-radius: 10px;
+}
+
+.staff > nav a{
+    width: 180px;
 }
 
 .staff>nav>h4 {
