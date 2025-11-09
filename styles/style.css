@@ -21,16 +21,20 @@ body {
 
 a {
     text-decoration: none;
+    font-family: 'Playfair Display', serif;
 }
 
 header {
-    height: 70px;
+    height: 10vh;
+    width: 100vw;
     color: var(--cor-fundo);
     background-color: #485059;
     display: flex;
     justify-content: space-around;
     align-items: center;
     box-shadow: 0px 3px 15px var(--terciary-color);
+    font-family: 'Playfair Display', serif;
+    position: fixed;
 }
 
 header>h1 {
@@ -67,7 +71,7 @@ header a {
     transform: scale(0.95);
 }
 
-.secundary-botton{
+.secundary-botton {
     display: inline-block;
     color: var(--background-color);
     transition: background-color 0.2s ease, transform 0.1s ease;
@@ -83,21 +87,28 @@ header a {
     border-bottom: solid 2px var(--background-color);
 }
 
-main{
-    margin-top: 16px;
+main {
+    width: fit-content;
+    margin: 12vw auto;
 }
 
-main > article{
+main>article {
     width: 70vw;
     margin: auto;
+    background-color: color-mix(in hsl, var(--background-color) 85%, black 15%);
+    margin: 20px auto;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px hsl(0, 0%, 60%);
+    min-width: 250px;
 }
 
-article > section > ul{
+article>section>ul {
     width: 100%;
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 24px;
     overflow-x: auto;
     padding: 20px;
 }
@@ -107,11 +118,11 @@ article > section > ul{
     border-radius: 15px;
 }
 
-.movie > a{
+.movie>a {
     color: var(--background-color);
 }
 
-.movie > a > div{
+.movie>a>div {
     width: fit-content;
     text-align: center;
     display: flex;
@@ -120,54 +131,62 @@ article > section > ul{
     padding-bottom: 12px;
 }
 
-.movie:hover{
-    background-color:  color-mix(in hsl, var(--terciary-color) 85%, white 15%);
+.movie:hover {
+    background-color: color-mix(in hsl, var(--terciary-color) 85%, white 15%);
     transform: scale(1.05);
 }
 
-.movie > a > div > img{
+.movie:active{
+    transform: scale(0.92);
+}
+
+.movie>a>div>img {
     width: 180px;
     height: 260px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
-.movie > a > div > div{
+.movie>a>div>div {
+    height: 80px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-h4, h5 {
+h4,
+h5 {
     width: 100px;
     margin: auto;
     font-family: 'Roboto';
-    overflow-x: hidden;
-    text-overflow:ellipsis;
 }
 
 h4 {
     font-size: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 h5 {
     font-size: 16px;
 }
 
-.movie > a > div > div{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.recomendaded{
+.recomendaded {
     margin-top: 12px;
 }
 
-@media(max-width: 1000px){
-    article > section > ul{
+@media(max-width: 1000px) {
+    article>section>ul {
         width: 90%;
         gap: 15px;
         justify-content: start;
+    }
+}
+
+@media(max-width: 700px) {
+    header>nav>ul {
+        display: none;
     }
 }

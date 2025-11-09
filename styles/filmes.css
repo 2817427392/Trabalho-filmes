@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    top: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: hsl(0, 0%, 95%);
+    --primary-color: hsl(27.857, 25%, 44%);
+    --secundary-color: hsl(22.5, 22%, 29%);
+    --terciary-color: hsl(211.765, 11%, 32%);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+}
+
+header {
+    height: 10vh;
+    width: 100vw;
+    color: var(--cor-fundo);
+    background-color: #485059;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 3px 15px var(--terciary-color);
+    font-family: 'Playfair Display', serif;
+    position: fixed;
+}
+
+header>h1 {
+    font-style: italic;
+    font-weight: bold;
+}
+
+header>nav>ul {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    list-style-type: none;
+    gap: 28px;
+}
+
+header a {
+    color: white;
+}
+
+.primary-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: white;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 2px 2px 10px hsl(0, 0%, 21%);
+    font-family: 'Playfair Display', serif;
+}
+
+.primary-button:hover {
+    background-color: color-mix(in hsl, var(--primary-color) 90%, black 10%);
+}
+
+.primary-button:active {
+    transform: scale(0.95);
+}
+
+.secundary-button {
+    display: inline-block;
+    color: var(--background-color);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+}
+
+.secundary-button:not(#active):hover {
+    transform: scale(1.05);
+}
+
+#active {
+    font-size: 24px;
+    border-bottom: solid 2px var(--background-color);
+}
+
+main {
+    margin-top: 12vh;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+hr {
+    width: 100%;
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: color-mix(in hsl, var(--background-color) 90%, black 10%);
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 5px 20px hsl(0, 0%, 48%);
+}
+
+.start>div {
+    padding: 12px;
+    margin: auto;
+    width: fit-content;
+    display: grid;
+    grid-template-areas: 'poster trailer trailer';
+    column-gap: 12px;
+    min-width: 300px;
+    max-width: 1500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.start>article {
+    padding: 16px 16px 0 16px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.star {
+    width: 30px;
+    height: 30px;
+}
+
+.general-information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.general-information>div {
+    display: flex;
+    gap: 8px;
+}
+
+.general-information>div>h4::after {
+    content: "•";
+    margin-left: 8px
+}
+
+.general-information>div>h4:last-child::after {
+    content: "";
+}
+
+.poster {
+    grid-area: poster;
+    min-width: 250px;
+    min-height: 380px;
+    width: 18vw;
+    height: 60vh;
+    border-radius: 10px;
+    transition: filter 0.3s ease;
+}
+
+.poster:hover {
+    filter: brightness(70%);
+}
+
+.avaliations {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.avaliations>div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.avaliations>div>div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+iframe {
+    grid-area: trailer;
+    min-width: 250px;
+    min-height: 380px;
+    width: 50vw;
+    height: 60vh;
+    border-radius: 10px;
+}
+
+.gender {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.gender>h5 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.gender>ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50vw;
+}
+
+.gender>ul>li {
+    padding: 8px;
+    border: solid var(--terciary-color) 3px;
+    border-radius: 16px;
+}
+
+.staff {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 128px;
+    background-color: color-mix(in hsl, var(--background-color) 90%, black 10%);
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 5px 20px hsl(0, 0%, 48%);
+}
+
+.staff>article{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 180px;
+}
+
+.staff>article>h4 {
+    font-size: 18px;
+}
+
+.staff>article>ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.staff > nav {
+    background-color: var(--terciary-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.staff>nav>h4 {
+    font-size: 20px;
+}
+
+.staff>nav>ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cast{
+    padding: 16px;
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cast > h5{
+    font-size: 18px;
+}
+
+.cast > ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.cast > ul > li > div{
+    text-align: center;
+}
+
+.cast > ul > li > div > img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.cast > ul > li > div > img:hover{
+    filter: brightness(80%);
+}
+
+.cast > ul > li > div:hover{
+    transform: scale(1.05);
+}
+
+.cast > ul > li > div > div > h4, h5{
+    width: 150px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cast > ul h5{
+    font-size: 13px;
+    color: #35393e;
+}
+
+.review {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: color-mix(in hsl, var(--background-color) 90%, black 10%);
+    width: 60vw;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 5px 20px hsl(0, 0%, 48%);
+}
+
+.review>div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.review>h4 {
+    font-size: 18px;
+}
+
+.opinion {
+    width: 60vw;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 2px var(--primary-color);
+    box-shadow: 10px 20px 20px color-mix(in hsl, var(--primary-color) 70%, white 30%);
+    margin-bottom: 30px;
+}
+
+.opinion>legend {
+    padding: 0 10px;
+    color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+form input, textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px var(--primary-color);
+}
+
+input:focus{
+    outline: none;
+    border: solid 2px color-mix(in hsl, var(--primary-color) 70%, white 30%);
+}
+
+textarea:focus{
+    outline: none;
+    border: solid 2px color-mix(in hsl, var(--primary-color) 70%, white 30%);
+}
+
+form>button {
+    width: 200px;
+    margin: auto;
+    border: none;
+}
+
+@media(max-width: 700px) {
+    *{
+        text-align: center;
+    }
+
+    header>nav>ul {
+        display: none;
+    }
+
+    .start h2{
+        text-align: left;
+    }
+
+    .start>div {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "poster"
+            "trailer";
+        row-gap: 12px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .poster {
+        margin: auto;
+    }
+
+    iframe {
+        margin: auto;
+    }
+
+    .staff {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        gap: 16px;
+    }
+
+    .staff > article > ul{
+        gap: 12px;
+    }
+
+    .staff>nav {
+        width: 60vw;
+    }
+
+    .cast{
+        align-items: center;
+    }
+
+    .review {
+        width: 80vw;
+        gap: 32px;
+    }
+
+    .review > div{
+        gap: 24px;
+    }
+
+    .opinion{
+        width: 80vw;
+    }
+
+    input, textarea{
+        text-align: left;
+    }
+}
