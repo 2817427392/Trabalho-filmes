@@ -90,7 +90,10 @@ header a {
 
 main {
     width: fit-content;
-    margin: 15vh auto;
+    margin: 15vh auto 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 main>article {
@@ -173,10 +176,6 @@ h4 {
 
 h5 {
     font-size: 16px;
-}
-
-.recomendaded {
-    margin-top: 12px;
 }
 
 @media(max-width: 1000px) {
