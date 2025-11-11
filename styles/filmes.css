@@ -27,7 +27,7 @@ a {
 header {
     height: 10vh;
     width: 100vw;
-    color: var(--cor-fundo);
+    color: var(--background-color);
     background-color: #485059;
     display: flex;
     justify-content: space-around;
@@ -415,6 +415,27 @@ form>button {
     width: 200px;
     margin: auto;
     border: none;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 16px;
+    background: linear-gradient(to bottom, var(--background-color), color-mix(in hsl, var(--terciary-color) 60%, white 40%));
+}
+
+footer > div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+footer p, h3{
+    font-family: 'Roboto';
 }
 
 @media(max-width: 700px) {
